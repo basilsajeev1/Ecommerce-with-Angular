@@ -1,0 +1,13 @@
+<div class="d-flex justify-content-between">
+  <p>Products</p> <a [routerLink]="['category-wise',item]" *ngFor="let item of categories"> {{item}}</a>
+</div>
+<div *ngFor="let item of productList">
+    <div class="card" style="width: 18rem;">
+        <img src="{{item.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{item.title}}</h5>
+          <p class="card-text">{{item.description}}</p>
+          <a [routerLink]="['product',item.id]" class="btn btn-primary">View</a>
+        </div>
+      </div>
+</div>

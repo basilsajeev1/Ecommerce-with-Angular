@@ -1,0 +1,12 @@
+<p>Products on your cart</p>
+<div *ngFor="let item of cart; index as i">
+    <div class="card" style="width: 18rem;">
+        <img src="{{item.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{item.title}}</h5>
+          <p class="card-text">{{item.description}}</p>
+          <a  class="btn btn-primary">Buy</a>
+          <a  class="btn btn-danger" (click)="remove(i)">Remove from cart</a>
+        </div>
+      </div>
+</div>
